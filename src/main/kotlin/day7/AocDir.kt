@@ -1,4 +1,4 @@
-package Day7
+package day7
 
 class AocDir(val name: String) {
     private val subDirs: MutableMap<String, AocDir> = mutableMapOf()
