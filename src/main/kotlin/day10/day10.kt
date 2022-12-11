@@ -8,10 +8,11 @@ fun main() {
         action.substringBefore(" ") to action.substringAfter(" ").let {
         if (it != action) it.toInt() else null
     }}
-    val handler = CycleHandler()
+    val handler = CycleHandler(40)
 
     for (action in actions) {
         handler.parseInstruction(action)
     }
     println(handler.getSignalStrengthAtCycle(listOf(20,60,100,140,180,220)).sum())
+    handler.print()
 }
